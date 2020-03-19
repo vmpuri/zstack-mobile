@@ -1,0 +1,35 @@
+{
+  "files": {
+    "app.js": "/zstack-mobile/static/js/app.79e3209c.chunk.js",
+    "app.js.map": "/zstack-mobile/static/js/app.79e3209c.chunk.js.map",
+    "runtime~app.js": "/zstack-mobile/static/js/runtime~app.418b8f3b.js",
+    "runtime~app.js.map": "/zstack-mobile/static/js/runtime~app.418b8f3b.js.map",
+    "static/js/2.8e2cdb3e.chunk.js": "/zstack-mobile/static/js/2.8e2cdb3e.chunk.js",
+    "static/js/2.8e2cdb3e.chunk.js.map": "/zstack-mobile/static/js/2.8e2cdb3e.chunk.js.map",
+    "apple/icons/icon_180x180.png": "/zstack-mobile/apple/icons/icon_180x180.png",
+    "apple/icons/icon_192x192.png": "/zstack-mobile/apple/icons/icon_192x192.png",
+    "apple/icons/icon_512x512.png": "/zstack-mobile/apple/icons/icon_512x512.png",
+    "apple/splash/icon_1125x2436.png": "/zstack-mobile/apple/splash/icon_1125x2436.png",
+    "apple/splash/icon_1136x640.png": "/zstack-mobile/apple/splash/icon_1136x640.png",
+    "apple/splash/icon_1242x2208.png": "/zstack-mobile/apple/splash/icon_1242x2208.png",
+    "apple/splash/icon_1242x2688.png": "/zstack-mobile/apple/splash/icon_1242x2688.png",
+    "apple/splash/icon_1334x750.png": "/zstack-mobile/apple/splash/icon_1334x750.png",
+    "apple/splash/icon_1792x828.png": "/zstack-mobile/apple/splash/icon_1792x828.png",
+    "apple/splash/icon_2208x1242.png": "/zstack-mobile/apple/splash/icon_2208x1242.png",
+    "apple/splash/icon_2436x1125.png": "/zstack-mobile/apple/splash/icon_2436x1125.png",
+    "apple/splash/icon_2688x1242.png": "/zstack-mobile/apple/splash/icon_2688x1242.png",
+    "apple/splash/icon_640x1136.png": "/zstack-mobile/apple/splash/icon_640x1136.png",
+    "apple/splash/icon_750x1334.png": "/zstack-mobile/apple/splash/icon_750x1334.png",
+    "apple/splash/icon_828x1792.png": "/zstack-mobile/apple/splash/icon_828x1792.png",
+    "favicon.ico": "/zstack-mobile/favicon.ico",
+    "index.html": "/zstack-mobile/index.html",
+    "manifest.json": "/zstack-mobile/manifest.json",
+    "precache-manifest.ac15c52fa10322da6d0941259809eece.js": "/zstack-mobile/precache-manifest.ac15c52fa10322da6d0941259809eece.js",
+    "serve.json": "/zstack-mobile/serve.json"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.418b8f3b.js",
+    "static/js/2.8e2cdb3e.chunk.js",
+    "static/js/app.79e3209c.chunk.js"
+  ]
+}
