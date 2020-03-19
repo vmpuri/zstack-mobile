@@ -4,8 +4,8 @@
     "app.js.map": "/zstack-mobile/static/js/app.79e3209c.chunk.js.map",
     "runtime~app.js": "/zstack-mobile/static/js/runtime~app.418b8f3b.js",
     "runtime~app.js.map": "/zstack-mobile/static/js/runtime~app.418b8f3b.js.map",
-    "static/js/2.8e2cdb3e.chunk.js": "/zstack-mobile/static/js/2.8e2cdb3e.chunk.js",
-    "static/js/2.8e2cdb3e.chunk.js.map": "/zstack-mobile/static/js/2.8e2cdb3e.chunk.js.map",
+    "static/js/2.d0642582.chunk.js": "/zstack-mobile/static/js/2.d0642582.chunk.js",
+    "static/js/2.d0642582.chunk.js.map": "/zstack-mobile/static/js/2.d0642582.chunk.js.map",
     "apple/icons/icon_180x180.png": "/zstack-mobile/apple/icons/icon_180x180.png",
     "apple/icons/icon_192x192.png": "/zstack-mobile/apple/icons/icon_192x192.png",
     "apple/icons/icon_512x512.png": "/zstack-mobile/apple/icons/icon_512x512.png",
@@ -24,12 +24,12 @@
     "favicon.ico": "/zstack-mobile/favicon.ico",
     "index.html": "/zstack-mobile/index.html",
     "manifest.json": "/zstack-mobile/manifest.json",
-    "precache-manifest.ac15c52fa10322da6d0941259809eece.js": "/zstack-mobile/precache-manifest.ac15c52fa10322da6d0941259809eece.js",
+    "precache-manifest.87b5ae1e8b3a09e671b618078f9a0317.js": "/zstack-mobile/precache-manifest.87b5ae1e8b3a09e671b618078f9a0317.js",
     "serve.json": "/zstack-mobile/serve.json"
   },
   "entrypoints": [
     "static/js/runtime~app.418b8f3b.js",
-    "static/js/2.8e2cdb3e.chunk.js",
+    "static/js/2.d0642582.chunk.js",
     "static/js/app.79e3209c.chunk.js"
   ]
 }

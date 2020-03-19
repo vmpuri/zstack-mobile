@@ -8,8 +8,8 @@ self.__precacheManifest = [
     "url": "/zstack-mobile/static/js/runtime~app.418b8f3b.js"
   },
   {
-    "revision": "264522f9c32fe9685793",
-    "url": "/zstack-mobile/static/js/2.8e2cdb3e.chunk.js"
+    "revision": "ead4896f1928170069de",
+    "url": "/zstack-mobile/static/js/2.d0642582.chunk.js"
   },
   {
     "revision": "d0c694b562b2208635f250762cd7fc79",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/zstack-mobile/apple/splash/icon_828x1792.png"
   },
   {
-    "revision": "3d3b05b24633ccfa3b14a69f70f2dc8b",
+    "revision": "f6204ed1b7993f88dbc7069fd930596a",
     "url": "/zstack-mobile/index.html"
   },
   {

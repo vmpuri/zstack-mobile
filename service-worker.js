@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/zstack-mobile/precache-manifest.ac15c52fa10322da6d0941259809eece.js"
+  "/zstack-mobile/precache-manifest.87b5ae1e8b3a09e671b618078f9a0317.js"
 );
 
 workbox.skipWaiting();
