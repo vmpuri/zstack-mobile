@@ -18,11 +18,11 @@ class LaplacianOfGaussian {
 
     logElement(x: number, y: number): number {
         let g: number = 0;
-        for (var ySubPixel = y - 0.5; ySubPixel < y + 0.55; ySubPixel += 0.1) {
-            for (var xSubPixel = x - 0.5; xSubPixel < x + 0.55; xSubPixel += 0.1) {
-                var s = -((xSubPixel ** 2) + (ySubPixel ** 2)) / (2 * (this.theta ** 2));
-                g = g + (1 / (Math.PI * Math.pow(this.theta, 4))) *
-                    (1 + s) * Math.pow(Math.E, s);
+        for (let ySubPixel = y - 0.5; ySubPixel < y + 0.55; ySubPixel += 0.1) {
+            for (let xSubPixel = x - 0.5; xSubPixel < x + 0.55; xSubPixel += 0.1) {
+                let s = -((xSubPixel ** 2) + (ySubPixel ** 2)) / (2 * (this.theta ** 2));
+                g += (1 / (Math.PI * this.theta ** 4)) *
+                    (1 + s) * Math.E ** s;
             }
         }
         g = -g / 121;
@@ -31,11 +31,11 @@ class LaplacianOfGaussian {
     }
 
     generateKernel() {
-        for (var i = 0; i < this.kernelSize; ++i) {
-            for (var j = 0; j < this.kernelSize; ++j) {
-                var x = (-this.kernelSize / 2) + j;
-                var y = (-this.kernelSize / 2) + i;
-                this.LoGKernel[j][i] = this.logElement(x, y);
+        for (let i = 0; i < this.kernelSize; ++i) {
+            for (let j = 0; j < this.kernelSize; ++j) {
+                let x = Math.ceil(-this.kernelSize / 2) + j;
+                let y = Math.ceil(-this.kernelSize / 2) + i;
+                this.LoGKernel[i][j] = this.logElement(x, y);
             }
         }
     }
@@ -44,8 +44,8 @@ class LaplacianOfGaussian {
         let sum: number = 0;
         let max: number = this.LoGKernel[0][0];
 
-        for (var j = 0; j < this.kernelSize; ++j) {
-            for (var i = 0; i < this.kernelSize; ++i) {
+        for (let j = 0; j < this.kernelSize; ++j) {
+            for (let i = 0; i < this.kernelSize; ++i) {
                 sum += this.LoGKernel[i][j];
             }
         }
@@ -55,9 +55,9 @@ class LaplacianOfGaussian {
         }
 
         else {
-            let delta: number = sum / (this.kernelSize ** 2);
-            for (var j = 0; j < this.kernelSize; ++j) {
-                for (var i = 0; i < this.kernelSize; ++i) {
+            const delta: number = sum / (this.kernelSize ** 2);
+            for (let j = 0; j < this.kernelSize; ++j) {
+                for (let i = 0; i < this.kernelSize; ++i) {
                     this.LoGKernel[i][j] -= delta;
                 }
             }

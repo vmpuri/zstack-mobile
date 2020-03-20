@@ -37,8 +37,8 @@ function convolution2D(input: ndarray<number>, kernel: ndarray<number>) {
 function convolution2DPadded(input: ndarray<number>, kernel: ndarray<number>) {
     let smallWidth = input.shape[0] - kernel.shape[0] + 1;
     let smallHeight = input.shape[1] - kernel.shape[1] + 1;
-    let top = kernel.shape[1] / 2;
-    let left = kernel.shape[0] / 2;
+    let top = Math.floor(kernel.shape[1] / 2);
+    let left = Math.floor(kernel.shape[0] / 2);
     let small = convolution2D(input, kernel);
     let large = ndarray(new Float32Array[input.size], input.shape);
     for (let j = 0; j < smallHeight; ++j) {
