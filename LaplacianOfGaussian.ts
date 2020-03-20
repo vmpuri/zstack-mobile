@@ -1,6 +1,5 @@
 import ndarray from "ndarray";
 import convolution from "./convolution";
-import { RawImageData } from "jpeg-js";
 
 class LaplacianOfGaussian {
     input: ImageData;
@@ -70,7 +69,7 @@ class LaplacianOfGaussian {
         }
     }
 
-    logImage(input: RawImageData<Uint8Array>, scale: number, offset: number): RawImageData<Uint8Array> {
+    logImage(input: ImageData, scale: number, offset: number) {
         return convolution.convolve(input, this.LoGKernel, scale, offset);
     }
 }

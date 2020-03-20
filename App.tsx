@@ -130,15 +130,18 @@ class App extends React.Component<{}, AppState> {
     );
   }
 
-  processImage(canvas?: Canvas) {
+  async processImage(canvas?: Canvas) {
     if (this.state.captureURI && canvas) {
       const img = new CanvasImage(canvas);
       img.src = this.state.captureURI;
-      img.addEventListener('load', () => {
+      img.addEventListener('load', async () => {
         canvas.width = Dimensions.get('screen').width;
         canvas.height = Dimensions.get('screen').height;
         const ctx = canvas.getContext("2d");
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        let inputImageData = await ctx.getImageData(0, 0, canvas.width, canvas.height);
+        let outputImageData = this.state.log.logImage(inputImageData, 1, 0);
+        ctx.putImageData(outputImageData, 0, 0);
       });
     }
   }
