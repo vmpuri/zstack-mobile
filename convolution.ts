@@ -51,24 +51,27 @@ function convolution2DPadded(input: ndarray<number>, kernel: ndarray<number>) {
     return large;
 }
 
-function convolve(image: ImageData, kernel: ndarray<number>, scale: number, offset: number) {
-    let image2DRGB = ndarray(image.data, [image.width, image.height, 3]);
+function convolve(image: ImageData, kernel: ndarray<number>, scale: number, offset: number) : ImageData {
+    let input2DRGB = ndarray(image.data, [image.width, image.height, 3]);
     let input2D = ndarray(new Uint8ClampedArray(image.width * image.height), [image.width, image.height]);
+    
     for (let i = 0; i < image.width; ++i) {
         for (let j = 0; j < image.height; j++) {
-            input2D[i][j] = image2DRGB[i][j][0];
+            input2D[i][j] = input2DRGB[i][j][0];
         }
     }
-
+    let output : ImageData = new ImageData(image.width, image.height);
+    let output2DRGB = ndarray(output.data, [image.width, image.height, 3]);
     let output2D = convolution2DPadded(input2D, kernel);
 
     for (let i = 0; i < image.width; ++i) {
         for (let j = 0; j < image.height; ++j) {
             for (let k = 0; k < 3; ++k) {
-                image2DRGB[i][j][k] = output2D[i][j];
+                output2DRGB[i][j][k] = output2D[i][j];
             }
         }
     }
+    return output;
 }
 
 export default { convolve };
