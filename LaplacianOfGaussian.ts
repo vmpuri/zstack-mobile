@@ -1,4 +1,5 @@
 import ndarray = require("ndarray");
+import convolution from "./convolution";
 
 class LaplacianOfGaussian{
     input : ImageData;
@@ -9,10 +10,6 @@ class LaplacianOfGaussian{
     kernelSize : number;
 
     constructor(k : number, t : number) {
-        /*
-        *   CONVOLUTION DECLARATION
-        */
-
         this.kernelSize = k;
         this.theta = t;
         
@@ -69,10 +66,8 @@ class LaplacianOfGaussian{
     }
 
     logImage (input : ImageData, scale : number, offset : number) : ImageData {
-        //
-        // CONVOLUTE input
-        // 
-        return input;
+        return convolution.convolve(input, this.LoGKernel, scale, offset);
     }
-
 }
+
+export default LaplacianOfGaussian;
