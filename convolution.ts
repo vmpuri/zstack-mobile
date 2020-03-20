@@ -61,7 +61,9 @@ function convolve(image: ImageData, kernel: ndarray<number>, scale: number, offs
     }
 
     let output2D = convolution2DPadded(input2D, kernel);
-    let output2DRGB = ndarray(new Uint8ClampedArray(input2DRGB.size), input2DRGB.shape);
+
+    let outputImageData = new ImageData(image.width, image.height);
+    let output2DRGB = ndarray(outputImageData.data, input2DRGB.shape);
     for (let i = 0; i < image.width; ++i) {
         for (let j = 0; j < image.height; ++j) {
             for (let k = 0; k < 3; ++k) {
@@ -69,6 +71,7 @@ function convolve(image: ImageData, kernel: ndarray<number>, scale: number, offs
             }
         }
     }
+    return outputImageData;
 }
 
 export default { convolve };
