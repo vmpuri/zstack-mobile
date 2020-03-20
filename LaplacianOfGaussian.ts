@@ -42,7 +42,7 @@ class LaplacianOfGaussian {
 
     kernelValid(t: number): boolean {
         let sum: number = 0;
-        let max: number = this.LoGKernel[0][0];
+        // let max: number = this.LoGKernel[0][0];
 
         for (let j = 0; j < this.kernelSize; ++j) {
             for (let i = 0; i < this.kernelSize; ++i) {
