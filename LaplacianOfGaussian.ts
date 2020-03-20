@@ -65,8 +65,8 @@ class LaplacianOfGaussian {
         }
     }
 
-    logImage(input: ImageData, scale: number, offset: number) {
-        convolution.convolve(input, this.LoGKernel, scale, offset);
+    logImage(input: ImageData, scale: number, offset: number) : ImageData {
+        return convolution.convolve(input, this.LoGKernel, scale, offset);
     }
 }
 
